@@ -47,10 +47,10 @@ import android.content.Intent;
 
 public class MainActivity extends Activity {
 	
-	TextView touchedXY, invertedXY, imgSize, colorRGB, write, color_name;
+	TextView touchedXY, invertedXY, imgSize, colorRGB, write, colorName;
 	ImageView imgSource1, imgSource2;
     TextToSpeech ttobj;
-    //private EditText write;
+    //private EditText color_name;
 
  /*   NotificationCompat.Builder builder =
             new NotificationCompat.Builder(this)
@@ -101,7 +101,7 @@ public class MainActivity extends Activity {
     }
 
     public void speakText(View view){
-        String toSpeak = write.getText().toString();
+        String toSpeak = colorName.getText().toString();//colorRGB.getTextColors().toString(); //write.getText().toString();
         Toast.makeText(getApplicationContext(), toSpeak,
                 Toast.LENGTH_SHORT).show();
         ttobj.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
@@ -119,11 +119,11 @@ public class MainActivity extends Activity {
         colorRGB = (TextView)findViewById(R.id.colorrgb);
     	imgSource1 = (ImageView)findViewById(R.id.source1);
     	imgSource2 = (ImageView)findViewById(R.id.source2);
-    	
     	imgSource1.setOnTouchListener(imgSourceOnTouchListener);
     	imgSource2.setOnTouchListener(imgSourceOnTouchListener);
         //write = (TextView)findViewById(R.id.colorrgb);
-
+        colorName = (TextView)findViewById(R.id.colorname);
+        //color_name.setText("");
 
         ttobj=new TextToSpeech(getApplicationContext(),
                 new TextToSpeech.OnInitListener() {
@@ -186,15 +186,17 @@ public class MainActivity extends Activity {
 
 			int touchedRGB = bitmap.getPixel(x, y);
             if(touchedRGB == Color.WHITE){
-                //color_name.setText("white");
-
+                colorName.setText("white");
                 colorRGB.setText("touched color: WHITE");
                 colorRGB.setTextColor(Color.BLACK);
-                write = (TextView)color_name;
+                speakText(view);
             }
             else {
+                colorName.setText("light blue");
                 colorRGB.setText("touched color: " + "#" + Integer.toHexString(touchedRGB));
                 colorRGB.setTextColor(touchedRGB);
+                speakText(view);
+
             }
 
 
