@@ -4,12 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world"
-        tools:context=".MainActivity" />
     <TextView 
         android:id="@+id/xy"
         android:layout_width="wrap_content"
@@ -31,23 +25,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="touched color: "/>
-    <TextView
-        android:id="@+id/colorname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""/>
 
 
-    <ImageView
-        android:id="@+id/source1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher"/>
     <ImageView
         android:id="@+id/source2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_launcher"/>
+        android:src="@drawable/test1"/>
 
 </LinearLayout>
-<!-- From: file:/Users/Larry/AndroidStudioProjects/AndroidTouchedPixel/app/src/main/res/layout/activity_main.xml -->
+<!-- From: file:/F:/Users/Larry/AndroidStudioProjects/AndroidTouchedPixel/AndroidTouchedPixel/app/src/main/res/layout/activity_main.xml -->
