@@ -1,2 +1,2 @@
-/Users/Larry/Documents/AndroidTouchedPixel/app/build/intermediates/classes/debug
-/Users/Larry/Documents/AndroidTouchedPixel/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-c820886b8ad365f59fcf58ede3fcd6ed1f839aaf.jar
+/home/bryan/AndroidStudioProjects/AndroidTouchedPixel/app/build/intermediates/classes/debug
+/home/bryan/AndroidStudioProjects/AndroidTouchedPixel/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-0510a6ecc363d048a4c1c4e619099258235d2b08.jar

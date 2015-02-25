@@ -19,15 +19,13 @@ import android.view.View.OnTouchListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.TesseractExample;
-
 import java.util.Locale;
 
 
 public class MainActivity extends Activity {
 
-    //Hooray, we have the ability to use the tesseract OCR now.
-	TesseractExample instance3;
+    //Why is this not working?.
+	//TesseractExample myTessInstance;
 
 	TextView touchedXY, invertedXY, imgSize, colorRGB;
 	ImageView imgSource1, imgSource2;

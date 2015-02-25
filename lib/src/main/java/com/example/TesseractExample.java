@@ -10,6 +10,8 @@ import java.io.File;
 
 public class TesseractExample {
 
+    TesseractExample(){}
+
     public static void example(String[] args) {
         File imageFile = new File("eurotext.tif");
         Tesseract instance = Tesseract.getInstance();  // JNA Interface Mapping
