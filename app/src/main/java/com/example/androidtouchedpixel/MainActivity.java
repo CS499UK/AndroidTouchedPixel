@@ -1,35 +1,34 @@
 package com.example.androidtouchedpixel;
 
 
-import android.graphics.Color;
-import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.AudioFormat;
+import android.media.AudioManager;
+import android.media.AudioTrack;
+import android.os.Bundle;
+import android.os.Handler;
+import android.speech.tts.TextToSpeech;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.TesseractExample;
 
 import java.util.Locale;
 
-import android.speech.tts.TextToSpeech;
-import android.widget.Toast;
-
-
-
-import android.media.AudioTrack;
-import android.media.AudioManager;
-import android.media.AudioFormat;
-import android.os.Handler;
-
 
 public class MainActivity extends Activity {
-	
+
+    //Hooray, we have the ability to use the tesseract OCR now.
+	TesseractExample instance1;
+
 	TextView touchedXY, invertedXY, imgSize, colorRGB;
 	ImageView imgSource1, imgSource2;
     TextToSpeech ttobj;
