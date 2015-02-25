@@ -100,8 +100,8 @@ public class MainActivity extends Activity {
 
     public void speakText(View view){
         String toSpeak = blockText;//colorRGB.getTextColors().toString(); //write.getText().toString();
-        Toast.makeText(getApplicationContext(), toSpeak,
-                Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), toSpeak,
+        //        Toast.LENGTH_SHORT).show();
         ttobj.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
 
     }
@@ -192,15 +192,16 @@ public class MainActivity extends Activity {
 			}
 
 			int touchedRGB = bitmap.getPixel(x, y);
-    /*
+
             if(touchedRGB == Color.WHITE){
                 //colorName.setText("white");
 
                 blockText = "";
-               *//* colorRGB.setText("touched color: WHITE");
+               /* colorRGB.setText("touched color: WHITE");
                 colorRGB.setTextColor(Color.BLACK);
-                *//*
+                */
             }
+            /*
             else if (touchedRGB == Color.BLACK){
                 *//*blockText="Border";
                 colorRGB.setText("touched color: " + "Black");
@@ -285,12 +286,15 @@ public class MainActivity extends Activity {
                 colorRGB.setTextColor(touchedRGB);
             }
 */
+            if (event.getAction() == android.view.MotionEvent.ACTION_UP) {
+                blockText = "";
+            }
+
             if(colorCheck(oldColorName, blockText)) {
                 speakText(view);
                 oldColorName = blockText;
                 //colorRGB.setText("True");
             }
-
 
 
 			return true;
