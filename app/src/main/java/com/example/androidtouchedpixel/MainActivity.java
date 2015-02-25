@@ -244,6 +244,7 @@ public class MainActivity extends Activity {
             }
 */
 
+            //test git
 
             //If finger raised reset TTS
             if (event.getAction() == android.view.MotionEvent.ACTION_UP) {
