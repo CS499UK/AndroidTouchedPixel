@@ -7,7 +7,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="text1">Text to Speech</string>
-    <string name="title_activity_main">Visual Aid</string>
+    <string name="title_activity_main">Sonic Sight</string>
     <string name="write">Write Text</string>
     <!-- From: file:/home/bryan/AndroidStudioProjects/AndroidTouchedPixel/app/src/main/res/values/styles.xml -->
     <eat-comment/>
