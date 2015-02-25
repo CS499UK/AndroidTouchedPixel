@@ -7,44 +7,29 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
-* .DS_Store
-* .idea/
-* .idea/.name
-* .idea/AndroidTouchedPixel.iml
-* .idea/compiler.xml
-* .idea/copyright/
-* .idea/copyright/profiles_settings.xml
-* .idea/encodings.xml
-* .idea/misc.xml
-* .idea/modules.xml
-* .idea/scopes/
-* .idea/scopes/scope_settings.xml
-* .idea/vcs.xml
-* .idea/workspace.xml
-* ic_launcher-web.png
+* .gitignore
+* COPYING
+* build.xml
 * proguard-project.txt
-
-Replaced Jars with Dependencies:
---------------------------------
-The importer recognized the following .jar files as third party
-libraries and replaced them with Gradle dependencies instead. This has
-the advantage that more explicit version information is known, and the
-libraries can be updated automatically. However, it is possible that
-the .jar file in your project was of an older version than the
-dependency we picked, which could render the project not compileable.
-You can disable the jar replacement in the import wizard and try again:
-
-android-support-v4.jar => com.android.support:support-v4:18.0.0
 
 Moved Files:
 ------------
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => app/src/main/AndroidManifest.xml
-* assets/ => app/src/main/assets/
-* res/ => app/src/main/res/
-* src/ => app/src/main/java/
+* AndroidManifest.xml => tesstwo/src/main/AndroidManifest.xml
+* assets/ => tesstwo/src/main/assets/
+* jni/ => tesstwo/src/main/jni/
+* libs/armeabi-v7a/liblept.so => tesstwo/src/main/jniLibs/armeabi-v7a/liblept.so
+* libs/armeabi-v7a/libtess.so => tesstwo/src/main/jniLibs/armeabi-v7a/libtess.so
+* libs/armeabi/liblept.so => tesstwo/src/main/jniLibs/armeabi/liblept.so
+* libs/armeabi/libtess.so => tesstwo/src/main/jniLibs/armeabi/libtess.so
+* libs/mips/liblept.so => tesstwo/src/main/jniLibs/mips/liblept.so
+* libs/mips/libtess.so => tesstwo/src/main/jniLibs/mips/libtess.so
+* libs/x86/liblept.so => tesstwo/src/main/jniLibs/x86/liblept.so
+* libs/x86/libtess.so => tesstwo/src/main/jniLibs/x86/libtess.so
+* res/ => tesstwo/src/main/res/
+* src/ => tesstwo/src/main/java/
 
 Next Steps:
 -----------

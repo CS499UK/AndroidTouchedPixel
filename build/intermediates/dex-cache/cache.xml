@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/Larry/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
+        jar="/home/bryan/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="/Users/Larry/AndroidStudioProjects/AndroidTouchedPixel/AndroidTouchedPixel/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-c820886b8ad365f59fcf58ede3fcd6ed1f839aaf.jar" />
+        <dex dex="/home/bryan/AndroidStudioProjects/AndroidTouchedPixel/AndroidTouchedPixel/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-0510a6ecc363d048a4c1c4e619099258235d2b08.jar" />
     </item>
 
 </items>
