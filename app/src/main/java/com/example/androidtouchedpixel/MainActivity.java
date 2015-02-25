@@ -27,7 +27,7 @@ import java.util.Locale;
 public class MainActivity extends Activity {
 
     //Hooray, we have the ability to use the tesseract OCR now.
-	TesseractExample instance2;
+	TesseractExample instance3;
 
 	TextView touchedXY, invertedXY, imgSize, colorRGB;
 	ImageView imgSource1, imgSource2;
