@@ -1,2 +1,2 @@
-/Users/Julian/Documents/CS Courses/CS 499/SonicSight/app/build/intermediates/classes/debug
-/Users/Julian/Documents/CS Courses/CS 499/SonicSight/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-1e42c06d3d00307a6ded25bd8e2e71aa934761ab.jar
+/Users/Larry/AndroidStudioProjects/AndroidTouchedPixel/AndroidTouchedPixel/app/build/intermediates/classes/debug
+/Users/Larry/AndroidStudioProjects/AndroidTouchedPixel/AndroidTouchedPixel/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-c820886b8ad365f59fcf58ede3fcd6ed1f839aaf.jar

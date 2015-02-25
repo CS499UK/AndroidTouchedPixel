@@ -100,6 +100,9 @@ public class MainActivity extends Activity {
 
     public void speakText(View view){
         String toSpeak = blockText;//colorRGB.getTextColors().toString(); //write.getText().toString();
+
+        //Uncomment to show text of TTS
+
         //Toast.makeText(getApplicationContext(), toSpeak,
         //        Toast.LENGTH_SHORT).show();
         ttobj.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
@@ -193,103 +196,61 @@ public class MainActivity extends Activity {
 
 			int touchedRGB = bitmap.getPixel(x, y);
 
+            //Continent Map
+
             if(touchedRGB == Color.WHITE){
                 //colorName.setText("white");
 
-                blockText = "";
+                blockText = "Ocean";
                /* colorRGB.setText("touched color: WHITE");
                 colorRGB.setTextColor(Color.BLACK);
                 */
             }
-            /*
-            else if (touchedRGB == Color.BLACK){
-                *//*blockText="Border";
-                colorRGB.setText("touched color: " + "Black");
-                colorRGB.setTextColor(touchedRGB);
-                *//*
-                playSound();
 
-            }
-
-            else if (touchedRGB == Color.parseColor("#ffed1c24")){
-                blockText = "Upper Left";
-                *//*colorRGB.setText("touched color: " + "Red");
-                colorRGB.setTextColor(touchedRGB);
-                *//*
-            }
-
-            else if (touchedRGB == Color.parseColor("#ff22b14c")){
-                blockText = "Lower Left";
-                //colorRGB.setText("touched color: " + "Green");
-                //colorRGB.setTextColor(touchedRGB);
-
-            }
-            else if (touchedRGB == Color.parseColor("#ff3f48cc")){
-                blockText = "Lower Right";
-                //colorRGB.setText("touched color: " + "Blue");
-                //colorRGB.setTextColor(touchedRGB);
-
-            }
-            else if (touchedRGB == Color.parseColor("#FFFF7F27")){
-                blockText = "Upper Right";
-                //colorRGB.setText("touched color: " + "Orange");
-                //colorRGB.setTextColor(touchedRGB);
-
-            }
-            else if (touchedRGB == Color.parseColor("#ffa349a4")){
-                blockText = "Center";
-                //colorRGB.setText("touched color: " + "Purple");
-                //colorRGB.setTextColor(touchedRGB);
-            }*/
-
-            //Continent Map
-
-            if (touchedRGB == Color.parseColor("#ff00cc00")){
+            else if (touchedRGB == Color.parseColor("#ff00cc00")){
                 blockText = "North America";
-                //colorRGB.setText("touched color: " + "Purple");
-                //colorRGB.setTextColor(touchedRGB);
+
             }
             else if (touchedRGB == Color.parseColor("#ff008000")){
                 blockText = "South America";
-                //colorRGB.setText("touched color: " + "Purple");
-                //colorRGB.setTextColor(touchedRGB);
+
             }
             else if (touchedRGB == Color.parseColor("#fffed52e")){
                 blockText = "Africa";
-                //colorRGB.setText("touched color: " + "Purple");
-                //colorRGB.setTextColor(touchedRGB);
+
             }
             else if (touchedRGB == Color.parseColor("#ffc10000")){
                 blockText = "Europe";
-                //colorRGB.setText("touched color: " + "Purple");
-                //colorRGB.setTextColor(touchedRGB);
             }
             else if (touchedRGB == Color.parseColor("#fff33e01")){
                 blockText = "Asia";
-                //colorRGB.setText("touched color: " + "Purple");
-                //colorRGB.setTextColor(touchedRGB);
+
             }
             else if (touchedRGB == Color.parseColor("#ff0040ff")){
                 blockText = "Antarctica";
-                //colorRGB.setText("touched color: " + "Purple");
-                //colorRGB.setTextColor(touchedRGB);
+
             }
 
             else if (touchedRGB == Color.parseColor("#ffc04080")){
                 blockText = "Australia";
-                //colorRGB.setText("touched color: " + "Purple");
-                //colorRGB.setTextColor(touchedRGB);
             }
+
+
+            //Uncomment to Display Color (Uncomment colorRGB in XML and in initialization above
 /*
             else{
                 colorRGB.setText("touched color: " + "#" + Integer.toHexString(touchedRGB));
                 colorRGB.setTextColor(touchedRGB);
             }
 */
+
+
+            //If finger raised reset TTS
             if (event.getAction() == android.view.MotionEvent.ACTION_UP) {
                 blockText = "";
             }
 
+            //Keeps from continually repeating when left on same section
             if(colorCheck(oldColorName, blockText)) {
                 speakText(view);
                 oldColorName = blockText;
