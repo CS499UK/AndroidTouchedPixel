@@ -117,11 +117,11 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         
-        //touchedXY = (TextView)findViewById(R.id.xy);
+        touchedXY = (TextView)findViewById(R.id.xy);
         //invertedXY = (TextView)findViewById(R.id.invertedxy);
         //imgSize = (TextView)findViewById(R.id.size);
 
-        //colorRGB = (TextView)findViewById(R.id.colorrgb);
+        colorRGB = (TextView)findViewById(R.id.colorrgb);
 
     	//imgSource1 = (ImageView)findViewById(R.id.source1);
     	imgSource2 = (ImageView)findViewById(R.id.source2);
@@ -161,11 +161,11 @@ public class MainActivity extends Activity {
 			int x = Integer.valueOf((int)eventXY[0]);
 			int y = Integer.valueOf((int)eventXY[1]);
 
-			/*touchedXY.setText(
+			touchedXY.setText(
 					"touched position: "
 					+ String.valueOf(eventX) + " / "
 					+ String.valueOf(eventY));
-			invertedXY.setText(
+		/*	invertedXY.setText(
 					"touched position: "
 					+ String.valueOf(x) + " / "
 					+ String.valueOf(y));
@@ -204,42 +204,59 @@ public class MainActivity extends Activity {
                 */
             }
 
-            else if (touchedRGB == Color.parseColor("#ff00cc00")){
+            else if (touchedRGB == Color.parseColor("#ff1ac604")){
                 blockText = "North America";
 
             }
-            else if (touchedRGB == Color.parseColor("#ff008000")){
+            else if (touchedRGB == Color.parseColor("#ff0f7001")){
                 blockText = "South America";
 
             }
-            else if (touchedRGB == Color.parseColor("#fffed52e")){
+            else if (touchedRGB == Color.parseColor("#fffdce24")){
                 blockText = "Africa";
 
             }
-            else if (touchedRGB == Color.parseColor("#ffc10000")){
+            else if (touchedRGB == Color.parseColor("#ffb10004")){
                 blockText = "Europe";
             }
-            else if (touchedRGB == Color.parseColor("#fff33e01")){
+            else if (touchedRGB == Color.parseColor("#ffed2607")){
                 blockText = "Asia";
 
             }
-            else if (touchedRGB == Color.parseColor("#ff0040ff")){
+            else if (touchedRGB == Color.parseColor("#ff001dff")){
                 blockText = "Antarctica";
 
             }
 
-            else if (touchedRGB == Color.parseColor("#ffc04080")){
+            else if (touchedRGB == Color.parseColor("#ffb0286d")){
                 blockText = "Australia";
             }
 
+            else if (touchedRGB == Color.parseColor("#ff0080ff")){
+                if (x<=536 && x >= 306 && y >= 64 && y <= 420){
+                    blockText = "Atlantic Ocean";
+                }
+                else if(y < 64){
+                    blockText = "Arctic Ocean";
+                }
+                else if(y > 420){
+                    blockText = "Southern Ocean";
+                }
+                else if(x<= 808 && x > 536 && y >= 153 && y <= 420){
+                    blockText = "Indian Ocean";
+                }
+                else if(x < 306 || x > 808){
+                    blockText = "Pacific Ocean";
+                }
+            }
 
             //Uncomment to Display Color (Uncomment colorRGB in XML and in initialization above
-/*
+
             else{
                 colorRGB.setText("touched color: " + "#" + Integer.toHexString(touchedRGB));
                 colorRGB.setTextColor(touchedRGB);
             }
-*/
+
 
             //If finger raised reset TTS
             if (event.getAction() == android.view.MotionEvent.ACTION_UP) {
