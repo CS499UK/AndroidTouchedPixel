@@ -18,6 +18,8 @@ import android.view.View;
 import android.view.View.OnTouchListener;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ImageSwitcher;
+import android.widget.Button;
 
 import java.util.Locale;
 
@@ -28,8 +30,11 @@ public class MainActivity extends Activity {
 	//TesseractExample myTessInstance;
 
 	TextView touchedXY, invertedXY, imgSize, colorRGB;
-	ImageView imgSource1, imgSource2;
+	ImageView imgSource1, imgSource2, imgSource3;
     TextToSpeech ttobj;
+    int checkScreen = 0;
+    private ImageSwitcher imageSwitcher;
+    Button btnNext;
 
     String oldColorName = "";
     String blockText= "";
@@ -106,6 +111,7 @@ public class MainActivity extends Activity {
 
     }
 
+
     public boolean colorCheck(String oldColor, String newColor){
         return !oldColor.equals(newColor);
     }
@@ -113,20 +119,26 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         
-        touchedXY = (TextView)findViewById(R.id.xy);
+        //touchedXY = (TextView)findViewById(R.id.xy);
         //invertedXY = (TextView)findViewById(R.id.invertedxy);
         //imgSize = (TextView)findViewById(R.id.size);
 
-        colorRGB = (TextView)findViewById(R.id.colorrgb);
+        //colorRGB = (TextView)findViewById(R.id.colorrgb);
+        btnNext=(Button)findViewById(R.id.buttonNext);
 
-    	//imgSource1 = (ImageView)findViewById(R.id.source1);
+    	imgSource1 = (ImageView)findViewById(R.id.source1);
     	imgSource2 = (ImageView)findViewById(R.id.source2);
+        imgSource3 = (ImageView)findViewById(R.id.source3);
     	//imgSource1.setOnTouchListener(imgSourceOnTouchListener);
     	imgSource2.setOnTouchListener(imgSourceOnTouchListener);
+
         //write = (TextView)findViewById(R.id.colorrgb);
         //colorName = (TextView)findViewById(R.id.colorname);
         //color_name.setText("");
@@ -141,14 +153,49 @@ public class MainActivity extends Activity {
                         }
                     }
                 });
+
+        btnNext.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v){
+
+                if(checkScreen == 0){
+                    checkScreen++;
+                    imgSource1.setVisibility(v.GONE);
+                }
+
+                else if(checkScreen==1){
+                    checkScreen++;
+                    imgSource1.setVisibility(v.VISIBLE);
+                    imgSource3.setOnTouchListener(imgSourceOnTouchListener);
+                    imgSource2.setVisibility(v.GONE);
+                }
+
+                else if(checkScreen==2){
+                    checkScreen++;
+                    imgSource1.setVisibility(v.GONE);
+                }
+                else{
+                    checkScreen = 0;
+                    imgSource1.setVisibility(v.VISIBLE);
+                    imgSource2.setVisibility(v.VISIBLE);
+                    imgSource2.setOnTouchListener(imgSourceOnTouchListener);
+                    imgSource3.setOnTouchListener(null);
+                }
+
+            }
+        });
     	
     }
+
+
 
     OnTouchListener imgSourceOnTouchListener
     = new OnTouchListener(){
 
 		@Override
 		public boolean onTouch(View view, MotionEvent event) {
+
+
 
 			float eventX = event.getX();
 			float eventY = event.getY();
@@ -161,11 +208,11 @@ public class MainActivity extends Activity {
 			int x = Integer.valueOf((int)eventXY[0]);
 			int y = Integer.valueOf((int)eventXY[1]);
 
-			touchedXY.setText(
+		/*	touchedXY.setText(
 					"touched position: "
 					+ String.valueOf(eventX) + " / "
 					+ String.valueOf(eventY));
-		/*	invertedXY.setText(
+		    invertedXY.setText(
 					"touched position: "
 					+ String.valueOf(x) + " / "
 					+ String.valueOf(y));
@@ -195,16 +242,16 @@ public class MainActivity extends Activity {
 
             //Continent Map
 
-            if(touchedRGB == Color.WHITE){
+            /*if(touchedRGB == Color.WHITE){
                 //colorName.setText("white");
 
                 blockText = "Ocean";
                /* colorRGB.setText("touched color: WHITE");
                 colorRGB.setTextColor(Color.BLACK);
-                */
-            }
+                *//*
+            }*/
 
-            else if (touchedRGB == Color.parseColor("#ff1ac604")){
+            if (touchedRGB == Color.parseColor("#ff1ac604")){
                 blockText = "North America";
 
             }
@@ -250,13 +297,33 @@ public class MainActivity extends Activity {
                 }
             }
 
-            //Uncomment to Display Color (Uncomment colorRGB in XML and in initialization above
+            else if (touchedRGB == Color.parseColor("#ff0000ff")){
+                blockText = "Redd House";
 
+            }
+
+            else if(touchedRGB == Color.parseColor("#ff408000")){
+                blockText = "Bleu House";
+            }
+
+            else if(touchedRGB == Color.parseColor("#ffff0000")){
+                blockText = "Greene House";
+            }
+
+            else if(touchedRGB == Color.BLACK){
+                playSound();
+                try{Thread.sleep(250);}catch (InterruptedException e) {}
+                //android.os.SystemClock.sleep(1000);
+
+            }
+
+            //Uncomment to Display Color (Uncomment colorRGB in XML and in initialization above
+        /*
             else{
                 colorRGB.setText("touched color: " + "#" + Integer.toHexString(touchedRGB));
                 colorRGB.setTextColor(touchedRGB);
             }
-
+        */
 
             //If finger raised reset TTS
             if (event.getAction() == android.view.MotionEvent.ACTION_UP) {
