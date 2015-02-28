@@ -52,13 +52,13 @@
         android:id="@+id/source1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scaleType="fitXY"
         android:src="@drawable/black"/>
 
     <Button
         android:id="@+id/buttonNext"
-        android:layout_marginBottom="150dp"
         android:layout_width="150px"
-        android:layout_height="wrap_content"
+        android:layout_height="50px"
         android:text="SWAP"
         />
 
