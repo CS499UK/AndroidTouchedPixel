@@ -16,18 +16,20 @@ import android.speech.tts.TextToSpeech;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
+import android.widget.Button;
+import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.ImageSwitcher;
-import android.widget.Button;
+
+import com.googlecode.tesseract.android.TessBaseAPI;
 
 import java.util.Locale;
 
 
 public class MainActivity extends Activity {
 
-    //Why is this not working?.
-	//TesseractExample myTessInstance;
+    //No errors thrown with this library!
+    TessBaseAPI myInstance = new TessBaseAPI();
 
 	TextView touchedXY, invertedXY, imgSize, colorRGB;
 	ImageView imgSource1, imgSource2, imgSource3;
