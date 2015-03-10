@@ -57,10 +57,31 @@
 
     <Button
         android:id="@+id/buttonNext"
-        android:layout_width="150px"
-        android:layout_height="50px"
+        android:title="buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="SWAP"
-        />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+    <EditText
+        android:id="@+id/filenameText"
+        android:title="filenameTextEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="@string/imageHint"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/buttonOpenImage"
+        android:layout_toRightOf="@+id/buttonNext"/>
+    <Button
+        android:id="@+id/buttonOpenImage"
+        android:title="buttonOpenImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OPEN"
+        android:onClick="openFile"
+        android:layout_alignBottom="@+id/filenameText"
+        android:layout_alignParentRight="true" />
 
 
 </RelativeLayout>

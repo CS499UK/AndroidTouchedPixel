@@ -2,18 +2,39 @@
 <items version="2" >
 
     <item
+        jar="/home/bryan/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/home/bryan/AndroidStudioProjects/AndroidTouchedPixel/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-1183b9bbb82c48ce6b52719d4b9fc6b13665cfbe.jar" />
+    </item>
+    <item
+        jar="/home/bryan/AndroidStudioProjects/AndroidTouchedPixel/app/build/intermediates/exploded-aar/AndroidTouchedPixel/openCVLibrary2410/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="314aabd57b7254239bec8d682c143ed867d13924">
+        <dex dex="/home/bryan/AndroidStudioProjects/AndroidTouchedPixel/app/build/intermediates/pre-dexed/debug/classes-80af90eb02a4b92a1a78ca6dbb77bfd17b1d9fe0.jar" />
+    </item>
+    <item
         jar="/home/bryan/AndroidStudioProjects/AndroidTouchedPixel/app/build/intermediates/exploded-aar/AndroidTouchedPixel.libraries/tess-two/unspecified/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="82cdac1e280fdc26420d97989364fb3160c37174">
+        sha1="fcc43ce87e7c9db97525f60d9f31d34551d00517">
         <dex dex="/home/bryan/AndroidStudioProjects/AndroidTouchedPixel/app/build/intermediates/pre-dexed/debug/classes-fa28d8f3ed68776c50ede43941eb59a901f3e910.jar" />
     </item>
     <item
-        jar="/home/bryan/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
+        jar="/home/bryan/AndroidStudioProjects/AndroidTouchedPixel/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="/home/bryan/AndroidStudioProjects/AndroidTouchedPixel/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-0510a6ecc363d048a4c1c4e619099258235d2b08.jar" />
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/home/bryan/AndroidStudioProjects/AndroidTouchedPixel/app/build/intermediates/pre-dexed/debug/classes-28bbc375e089a02582318b67996050b5eb6e582b.jar" />
+    </item>
+    <item
+        jar="/home/bryan/AndroidStudioProjects/AndroidTouchedPixel/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/home/bryan/AndroidStudioProjects/AndroidTouchedPixel/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-0a9e29cf19dd30490175940ce4441da99b6ad99f.jar" />
     </item>
 
 </items>

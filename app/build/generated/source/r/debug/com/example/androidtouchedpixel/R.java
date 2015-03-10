@@ -9,6 +9,43 @@ package com.example.androidtouchedpixel;
 
 public final class R {
     public static final class attr {
+        /** <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>any</code></td><td>-1</td><td></td></tr>
+<tr><td><code>back</code></td><td>99</td><td></td></tr>
+<tr><td><code>front</code></td><td>98</td><td></td></tr>
+</table>
+         */
+        public static final int camera_id=0x7f010003;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int metaButtonBarButtonStyle=0x7f010001;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int metaButtonBarStyle=0x7f010000;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int show_fps=0x7f010002;
+    }
+    public static final class color {
+        public static final int black_overlay=0x7f040000;
     }
     public static final class drawable {
         public static final int black=0x7f020000;
@@ -21,29 +58,136 @@ public final class R {
         public static final int test1=0x7f020007;
     }
     public static final class id {
-        public static final int buttonNext=0x7f070004;
-        public static final int imageSwitcher=0x7f070000;
-        public static final int menu_settings=0x7f070005;
-        public static final int source1=0x7f070003;
-        public static final int source2=0x7f070002;
-        public static final int source3=0x7f070001;
+        public static final int any=0x7f080000;
+        public static final int back=0x7f080001;
+        public static final int buttonNext=0x7f08000a;
+        public static final int buttonOpenImage=0x7f08000c;
+        public static final int dummy_button=0x7f080005;
+        public static final int filenameText=0x7f08000b;
+        public static final int front=0x7f080002;
+        public static final int fullscreen_content=0x7f080003;
+        public static final int fullscreen_content_controls=0x7f080004;
+        public static final int imageSwitcher=0x7f080006;
+        public static final int menu_settings=0x7f08000d;
+        public static final int source1=0x7f080009;
+        public static final int source2=0x7f080008;
+        public static final int source3=0x7f080007;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
+        public static final int activity_fullscreen=0x7f030000;
+        public static final int activity_main=0x7f030001;
     }
     public static final class menu {
-        public static final int activity_main=0x7f060000;
+        public static final int activity_main=0x7f070000;
     }
     public static final class string {
-        public static final int action_settings=0x7f040000;
-        public static final int app_name=0x7f040001;
-        public static final int hello_world=0x7f040002;
-        public static final int menu_settings=0x7f040003;
-        public static final int text1=0x7f040004;
-        public static final int title_activity_main=0x7f040005;
-        public static final int write=0x7f040006;
+        public static final int action_settings=0x7f050000;
+        public static final int app_name=0x7f050001;
+        public static final int dummy_button=0x7f050002;
+        public static final int dummy_content=0x7f050003;
+        public static final int hello_world=0x7f050004;
+        public static final int imageHint=0x7f050005;
+        public static final int menu_settings=0x7f050006;
+        public static final int text1=0x7f050007;
+        public static final int title_activity_fullscreen=0x7f050008;
+        public static final int title_activity_main=0x7f050009;
+        public static final int write=0x7f05000a;
     }
     public static final class style {
-        public static final int AppTheme=0x7f050000;
+        public static final int AppTheme=0x7f060000;
+        public static final int ButtonBar=0x7f060001;
+        public static final int ButtonBarButton=0x7f060002;
+        public static final int FullscreenActionBarStyle=0x7f060004;
+        public static final int FullscreenTheme=0x7f060003;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a ButtonBarContainerTheme.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ButtonBarContainerTheme_metaButtonBarButtonStyle com.example.androidtouchedpixel:metaButtonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ButtonBarContainerTheme_metaButtonBarStyle com.example.androidtouchedpixel:metaButtonBarStyle}</code></td><td></td></tr>
+           </table>
+           @see #ButtonBarContainerTheme_metaButtonBarButtonStyle
+           @see #ButtonBarContainerTheme_metaButtonBarStyle
+         */
+        public static final int[] ButtonBarContainerTheme = {
+            0x7f010000, 0x7f010001
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.androidtouchedpixel.R.attr#metaButtonBarButtonStyle}
+          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.androidtouchedpixel:metaButtonBarButtonStyle
+        */
+        public static final int ButtonBarContainerTheme_metaButtonBarButtonStyle = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.androidtouchedpixel.R.attr#metaButtonBarStyle}
+          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.androidtouchedpixel:metaButtonBarStyle
+        */
+        public static final int ButtonBarContainerTheme_metaButtonBarStyle = 0;
+        /** Attributes that can be used with a CameraBridgeViewBase.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CameraBridgeViewBase_camera_id com.example.androidtouchedpixel:camera_id}</code></td><td></td></tr>
+           <tr><td><code>{@link #CameraBridgeViewBase_show_fps com.example.androidtouchedpixel:show_fps}</code></td><td></td></tr>
+           </table>
+           @see #CameraBridgeViewBase_camera_id
+           @see #CameraBridgeViewBase_show_fps
+         */
+        public static final int[] CameraBridgeViewBase = {
+            0x7f010002, 0x7f010003
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.androidtouchedpixel.R.attr#camera_id}
+          attribute's value can be found in the {@link #CameraBridgeViewBase} array.
+
+
+          <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>any</code></td><td>-1</td><td></td></tr>
+<tr><td><code>back</code></td><td>99</td><td></td></tr>
+<tr><td><code>front</code></td><td>98</td><td></td></tr>
+</table>
+          @attr name com.example.androidtouchedpixel:camera_id
+        */
+        public static final int CameraBridgeViewBase_camera_id = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.androidtouchedpixel.R.attr#show_fps}
+          attribute's value can be found in the {@link #CameraBridgeViewBase} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.androidtouchedpixel:show_fps
+        */
+        public static final int CameraBridgeViewBase_show_fps = 0;
+    };
 }

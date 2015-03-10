@@ -2,6 +2,7 @@ package com.example.androidtouchedpixel;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Matrix;
@@ -17,6 +18,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -51,6 +53,18 @@ public class MainActivity extends Activity {
 
     Handler handler = new Handler();
 
+    public final static String MY_ORIGIN_STRING = "com.example.app";
+    public void openFile(View view){
+        //TODO: Open the fullscreen activity.
+        //The following lines are from the android developers tutorial
+
+        //Get the filename from the EditText box
+        Intent intent = new Intent(this, FullscreenActivity.class);
+        EditText editText = (EditText) findViewById(R.id.filenameText);
+        String userFilename = editText.getText().toString();
+        intent.putExtra(MY_ORIGIN_STRING, userFilename);
+        startActivity(intent);
+    }
 
     @Override
     protected void onResume() {
