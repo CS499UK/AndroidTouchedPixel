@@ -23,6 +23,8 @@ import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
+
 import com.googlecode.tesseract.android.TessBaseAPI;
 
 import java.util.Locale;
